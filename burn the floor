@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Burn the floor</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+	<style>@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+navbar{
+  padding: .8rem;
+}
+
+.navbar-nav li{
+  padding-right: 20px;
+}
+
+nav-link{
+  font-size: 1.1em !important;
+}
+.carousel-inner img{
+  width: 100%;
+  height:100%;
+}
+ carousel-caption {
+position: absolute;
+top: 50%;
+transform: translate(-50%);
+ }
+.carousel-caption h1{
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px #000;
+}
+.carousel-caption h3{
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px #000;
+  padding-bottom: 1rem;
+}
+.btn-primary{
+  background-color: #6648b1;
+  border:1px solid #563d7c;
+}
+
+.btn-primary:hover{
+  background-color: #6648b1;
+  border:1px solid #563d7c;
+}
+
+.jumbotron{
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.padding{
+  padding-bottom: 2rem;
+}
+.welcome{
+  width: 75%
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.welcome hr{
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+
+}
+.fun{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.gif{
+  max-width: 100%;
+}
+
+.social a{
+  font-size: 2em;
+  padding: 1rem;
+
+}
+
+.fa-facebok{
+  color: #3b5998;
+}
+.fa-twitter{
+  color: #00aced;
+}
+.fa-instagram{color: #517fa4;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover,
+
+footer{
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+
+hr.light{
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top:8rem;
+  margin-bottom: 1rem
+}
+
+footer a{
+  color: #d5d5d5;
+}
+hr.light-100{
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+  }
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+navbar.brand img{
+  max-height: 40px;
+}
+
+header.row{
+  min-height:100vh;
+  align-top: center;
+}
+.col{
+  padding: 1rem;
+}
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/</style>
+</head>
+<body >
+
+<!--- Navigation -->
+
+ <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="img/Logo.png.png" alt="logo de Burn The Floor" width="50"> Burn The Floor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nos Coachs</a>
+            </li>
+            <li class="nav-item">
+        <a class="nav-link" href="#">A Propos de nous</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Témoignages</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contacts</a>
+      </li>
+<li class="nav-item">
+        <a class="nav-link" href="#">Inscription</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Se connecter
+        </a>
+      </li>
+    </ul>
+      </div>
+      </nav>
+<!--- Image Slider -->
+
+<div id="slides" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#slides" data-slide-to="0"></li>
+    <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+    <li data-target="#cSlidesOnly" data-slide-to="2"></li>
+  </ul>
+
+  <div class="carousel-inner">
+ 
+  <div class="carousel-item active">
+      <img class="d-block w-100" src="img/Cassie.png" alt="First slide">
+      <div class="carousel-caption">
+        <h1 class="display-2">Danse avec moi</h1>
+        <h3> Libère ton potention</h3>
+        <button type="button" class="btn btn-primary btn-lg"> Commencer un essai gratuit</button>
+  	</div>
+  </div>
+  <div class="carousel-item">
+      <img class="d-block w-100" src="img/SALSA J.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/TW" alt="Third slide">
+    </div>
+  </div>
+   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!--- Jumbotron -->
+<div class="container-fluid padding">
+	<div class="row Jumbotron">
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+    <h1 class="display-4">Apprendre avec les meilleurs</h1>
+    <p class="lead">Chaque classe et programme sont soigneusement conçus par les coachs en fonction des niveaux.</p>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+	<a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">Ce qui t'attend</button>
+	</a>
+	</div>
+</div>
+</div>
+<!--- Welcome Section -->
+
+	
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+    	<h1 class="display-4">Nos classes</h1>
+    </div>
+    <hr>
+    <div class="col-12">
+   
+    </div>
+</div>
+</div>
+
+<!--- Three Column Section -->
+<div class="container-fluid padding">
+	<div class="row padding">
+
+	<div class="col-xs-12 col-sm-6 col-md-4">
+		<h3>Afrobeat dance</h3>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <h3>Kizomba</h3> 
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <h3>Hip Hop</h3>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <h3>Bachata</h3> 
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <h3>Salsa</h3> 
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <h3>Danse classique</h3> 
+    </div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+      <h3>Danse comtemporaire</h3>
+    </div>
+     <div class="col-xs-12 col-sm-6 col-md-4">
+      <h3>Tango</h3> 
+      </div>  
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <h3>Flamenco</h3> 
+   
+  </div>
+
+	</div>
+</div>
+	<hr class="my-4">
+</div>     
+             
+</div>
+</div>
+
+
+<!--- Two Column Section -->
+<button class="fun" data-toggle="collapse" data-target="#emoji">clique pour du fun</button>
+
+<div id="emoji" class="collapse">
+<div class="container-fluid padding">
+<div class="row text-center">
+
+  <div class="col-sm-6 col-md-3">
+        <img class="gif"src="https://tenor.com/view/tuzki-dance-gif-11769639.gif"></div>
+
+  <div class="col-sm-6 col-md-3">
+        <img class="gif"src="yckgRzy9i.gif"></div>
+
+  <div class="col-sm-6 col-md-3">
+        <img class="gif" src="https://media.giphy.com/media/S9olW3RF0imyyFqm5C/giphy.gif"></div>
+  <div class="col-sm-6 col-md-3">
+        <img class="gif" src="https://media.giphy.com/media/1ykmFZ65ga129X1Tfe/giphy.gif"></div>
+
+    </div>
+  </div>
+</div>
+<!--- Meet the team -->
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <h1 class="display-4">Vos coachs</h1>
+      
+    </div>
+  </div>
+</div>
+
+<!--- Cards -->
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-md-4">
+      <div class="card">
+      	<span class="border border-warning">
+        <img class="card-img-top" src="img/dals7.jpg" width="300">
+        <div class="card-body">
+          <h4 class="card-title">Denitsa Ikonomova et Maxime Dereymez</h4>
+          <p class="card-text">Championne de Bulgarie en danse standard, championne Amateur League et danseuse à l'émission dans avec les Stars dont 4 titres à son actif et lui 9 fois champion de France. Il est Directeur artistique,chorégraphe et danseur à l'émission Danse avec les Stars dont 1 titres à son actif. vous invite sur la piste depuis chez vous, à tout moment et à votre rythme à travers les cours en vidéo ludiques et faciles à suivre.</p>
+          <a href="#" class="btn btn-outline-secondary">Voir la classe</a>
+      </span>
+        </div>
+        </div>
+      </div>
+
+ <div class="col-md-4">
+      <div class="card">
+      	<span class="border border-danger">
+        <img class="card-img-top" src="img/twins.jpg" width="300">
+        <div class="card-body">
+          <h4 class="card-title">Larry, alias Ca Blaze et Laurent,alias Lil Beast</h4>
+          <p class="card-text">Duo de danseur-chorégraphes,français. Ils sont l'un des groupes de danses les plus influents du monde et vous invite sur la piste de danse.</p>
+          <a href="#" class="btn btn-outline-secondary">Voir la classe</a>
+      </span>
+        </div>
+      </div>
+    </div>
+<div class="col-md-4">
+  <div class="card">
+  	<span class="border border-info">
+      <img class="card-img-top" src="img/dance_afro.png" width="50">
+        <div class="card-body">
+          <h4 class="card-title">BadGyal Cassie</h4>
+          <p class="card-text">La danseuse et chorégraphe des stars vous invite sous le dancefloor pour apprendre l'afrobeat et à développer les differentes techniques de l'Afrobeat sous des chants très tendance.Elle vous attend.</p>
+          <a href="#" class="btn btn-outline-secondary">Voir la classe</a>
+      </span>
+        </div>
+      </div>
+</div>
+</div>
+    </div>
+
+    <!--- Les cours  -->
+  <div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-md-4">
+      <img class="card-img-top" src="img/lecon1.jpg" class="rounded-lg">
+  </div>
+  <div class="col-md-4">
+      <div class="card">
+	<img class="card-img-top"src="img/mnute.jpg">
+</div>
+</div>
+<div class="col-md-4">
+      <div class="card">
+	<img class="card-img-top"src="img/categorie.jpg">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">  
+  <div class="row padding">
+      <div class=" col-md-12 col-lg-6">
+    <h2 class="text-uppercase">Accès à tous les cours</h2>
+    <p> Accédez à toutes classes et profitez de nouvelles versions chaque semaine, sans vous ruiner.</p>
+    <br>
+</div>
+<div class="col-lg-6">
+	<img class="img-fluid" src="img/mensuel.jpg" alt="">
+	<img class="img-fluid"src="img/Annuel.jpg" width="250" alt="">
+</div> 
+</div>
+</div>
+
+<!-----------A propos--------->
+
+<!--- Témognages -->
+
+<!--- Footer -->
+<footer>
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="img/logo1.png" width="40">
+        <hr class="light">
+        <p>+33 755049967</p>
+        <p>burn-the-floor.fr</p>
+        <p>121 avenue du Général Leclerc</p>
+        <p>Paris, France 75016</p>
+      </div>
+<div class="col-md-4">
+        <hr class="light">
+        <h5> Nos horaires</h5>
+        <hr class="Light">
+        <p>Lundi à vendredi: 9h-18h</p>
+        <p>samedi et dimanche: fermé</p>
+      </div>
+
+<div class="col-md-4">
+        <hr class="light">
+        <h5> Réseaux sociaux</h5>
+        <hr class="col-md-4">   
+     <div class="col-12 social padding">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+
+<div class="col-md-4">
+        <hr class="light">
+        <h5> Téléchager</h5>
+        <hr class="col-md-4">
+        <img src="img/images.png" width="150">
+        <img src="img/bouton.jpg" width="150">
+      </div>
+      <div class="col-12">
+        <hr class="Light">
+        <h5>&copy;www.burn-the-floor.fr</h5>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
